@@ -1,5 +1,6 @@
 import { Project } from "../types";
 import VyaparHome from '../assets/Projects/VyaparAppHomepage.jpg'
+import HRMS from '../assets/Projects/Human-Resource.jpg'
 
 export const projects: Project[] = [
     {
@@ -19,7 +20,7 @@ export const projects: Project[] = [
         title: 'Human Resource Management System',
         description: 'A full-stack HRM web application designed to manage employee data, attendance, leave requests, payroll, and departmental structure. Admins can monitor HR activities in real-time with secure role-based access.',
         stack: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Tailwind CSS'],
-        image: 'https://images.unsplash.com/photo-1580894732444-8ecded79592c?auto=format&fit=crop&w=1950&q=80',
+        image: HRMS,
         category: 'MERN',
         githubLink: 'https://github.com/holkar-somesh01/Human-Resource-Management-Frontend',
         liveLink: "https://human-resource-management-system-xjin.onrender.com/",

@@ -1,12 +1,14 @@
 import { TypeAnimation } from 'react-type-animation';
 import { Download, Github, Instagram, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Resume from '../assets/resume/SomeshHolkar-Resume.pdf'
+import HERO from '../assets/Hero.jpg'
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen overflow-hidden flex items-center justify-center bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 pt-16">
+    <section id="home" className="min-h-screen min-w-full overflow-hidden flex items-center justify-center bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 overflow-hidden lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -44,8 +46,9 @@ const Hero = () => {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/resume.pdf"
-                download
+                href={Resume}
+                // download
+                target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors"
               >
                 <Download className="w-5 h-5 mr-2" />
@@ -95,7 +98,9 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-indigo-600 rounded-lg transform rotate-6 scale-105 opacity-10"></div>
               <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80"
+                src={HERO}
+                // src='https://c1.wallpaperflare.com/preview/623/487/747/technology-code-coding-computer-thumbnail.jpg'
+                // src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80"
                 alt="Developer"
                 className="w-full h-auto rounded-lg shadow-xl relative z-10"
               />
